@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Modelos</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <h1>Criar Professor</h1>
+    <form action="{% url 'index' %}" method="post">
+        {% csrf_token %}
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="name_prof" name="nome"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="e-mail" name="email"><br>
+        <label for="celular">Celular:</label><br>
+        <input type="text" id="cell" name="celular"><br><br>
+        <input type="submit" value="Criar Professor">
+    </form>
+
+    <h1>Criar Disciplina</h1>
+    <form action="{% url 'index' %}" method="post">
+        {% csrf_token %}
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="name_disc" name="nome"><br>
+        <label for="carga_horaria">Carga Horária:</label><br>
+        <input type="number" id="carga_ho" name="carga_horaria"><br>
+        <label for="codigo">Código:</label><br>
+        <input type="text" id="cod" name="codigo"><br><br>
+        <input type="submit" value="Criar Disciplina">
+    </form>
+</body>
+</html>
