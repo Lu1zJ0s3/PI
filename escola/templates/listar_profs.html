@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Professores e Disciplinas</title>
+</head>
+<body>
+    <h1>Professores</h1>
+    <ul>
+        {% for professor in professores %}
+            <li>{{ professor.nome }} - {{ professor.email }} - {{ professor.celular }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Disciplinas</h1>
+    <ul>
+        {% for disciplina in disciplinas %}
+            <li>{{ disciplina.nome }} - {{ disciplina.carga_horaria }} horas - {{ disciplina.codigo }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
