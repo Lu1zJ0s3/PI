@@ -13,7 +13,7 @@ def criar_professor(request):
     cell = request.POST['celular']
     professores = Professor(nome=nome_prof, email=e_mail, celular=cell)
     professores.save()
-    return redirect("listar_professores/")
+    return redirect("/listar_professores/")
 
 
 def criar_disciplina(request):
@@ -22,14 +22,14 @@ def criar_disciplina(request):
     cod = request.POST['codigo']
     Disciplina = Disciplina(nome=nom, carga_horaria=time, codigo=cod)
     Disciplina.save()
-    return redirect("/")
+    return redirect("listar_disciplinas/")
 
 
 def listar_professores(request):
     professores = Professor.objects.all()
-    return render(request, 'listar_profs.html', {'professores': professores})
+    return render(request, 'listar_professores.html', {'professores': professores})
 
 
 def listar_disciplinas(request):
     disciplinas = Disciplina.objects.all()
-    return render(request, 'listar_disci.html', {'disciplinas': disciplinas})
+    return render(request, 'listar_disciplinas.html', {'disciplinas': disciplinas})
