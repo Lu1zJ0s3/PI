@@ -11,27 +11,27 @@
 
 <body>
     <h1>Criar Professor</h1>
-    <form action="{% url 'index' %}" method="post">
+    <form action="{% url 'criar_professor' %}" method="post">
         {% csrf_token %}
         <label for="nome">Nome:</label><br>
-        <input type="text" id="name_prof" name="nome"><br>
+        <input type="text" id="" name="nome_prof"><br>
         <label for="email">Email:</label><br>
-        <input type="email" id="e-mail" name="email"><br>
+        <input type="email" id="" name="email"><br>
         <label for="celular">Celular:</label><br>
-        <input type="text" id="cell" name="celular"><br><br>
-        <input type="submit" value="Criar Professor">
+        <input type="text" id="" name="celular"><br><br>
+        <button type="submit" id="new">Criar Professor</button>
     </form>
 
     <h1>Criar Disciplina</h1>
-    <form action="{% url 'index' %}" method="post">
+    <form action="{% url 'criar_disciplina' %}" method="post">
         {% csrf_token %}
         <label for="nome">Nome:</label><br>
-        <input type="text" id="name_disc" name="nome"><br>
+        <input type="text" name="nome_disci"><br>
         <label for="carga_horaria">Carga Horária:</label><br>
-        <input type="number" id="carga_ho" name="carga_horaria"><br>
+        <input type="number" name="carga_horaria"><br>
         <label for="codigo">Código:</label><br>
-        <input type="text" id="cod" name="codigo"><br><br>
-        <input type="submit" value="Criar Disciplina">
+        <input type="text" name="codigo"><br><br>
+        <button type="submit" id="new">Criar Disciplina</button>
     </form>
 </body>
 </html>

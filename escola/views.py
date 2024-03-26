@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Professor
-from .forms import ProfessorForm, DisciplinaForm
+from .models import Professor, Disciplina
 
 
 def index(request):
@@ -9,22 +8,28 @@ def index(request):
 
 
 def criar_professor(request):
-    if request.method == 'POST':
-        form = ProfessorForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('/')
-    else:
-        form = ProfessorForm()
-    return render(request, 'escola.html', {'form': form})
+    nome_prof = request.POST['nome_prof']
+    e_mail = request.POST['email']
+    cell = request.POST['celular']
+    professores = Professor(nome=nome_prof, email=e_mail, celular=cell)
+    professores.save()
+    return redirect("listar_professores/")
 
 
 def criar_disciplina(request):
-    if request.method == 'POST':
-        form = DisciplinaForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('/')
-    else:
-        form = DisciplinaForm()
-    return render(request, 'escola.html', {'form': form})
+    nom = request.POST['nome_disci']
+    time = request.POST['carga_horaria']
+    cod = request.POST['codigo']
+    Disciplina = Disciplina(nome=nom, carga_horaria=time, codigo=cod)
+    Disciplina.save()
+    return redirect("/")
+
+
+def listar_professores(request):
+    professores = Professor.objects.all()
+    return render(request, 'listar_profs.html', {'professores': professores})
+
+
+def listar_disciplinas(request):
+    disciplinas = Disciplina.objects.all()
+    return render(request, 'listar_disci.html', {'disciplinas': disciplinas})
