@@ -20,9 +20,9 @@ def criar_disciplina(request):
     nom = request.POST['nome_disci']
     time = request.POST['carga_horaria']
     cod = request.POST['codigo']
-    Disciplina = Disciplina(nome=nom, carga_horaria=time, codigo=cod)
-    Disciplina.save()
-    return redirect("listar_disciplinas/")
+    disciplinas = Disciplina(nome=nom, carga_horaria=time, codigo=cod)
+    disciplinas.save()
+    return redirect("/listar_disciplinas/")
 
 
 def listar_professores(request):
