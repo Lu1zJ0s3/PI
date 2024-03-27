@@ -13,11 +13,11 @@
     <h1>Criar Professor</h1>
     <form action="{% url 'criar_professor' %}" method="post">
         {% csrf_token %}
-        <label for="nome">Nome:</label><br>
+        <div><label class="label-width" for="nome">Nome:</label><br></div>
         <input type="text" id="" name="nome_prof"><br>
-        <label for="email">Email:</label><br>
+        <div><label class="label-width" for="email">Email:</label><br></div>
         <input type="email" id="" name="email"><br>
-        <label for="celular">Celular:</label><br>
+        <div><label class="label-width" for="celular">Celular:</label><br></div>
         <input type="text" id="" name="celular"><br><br>
         <button type="submit" id="new">Criar Professor</button>
     </form>
@@ -25,11 +25,11 @@
     <h1>Criar Disciplina</h1>
     <form action="{% url 'criar_disciplina' %}" method="post">
         {% csrf_token %}
-        <label for="nome">Nome:</label><br>
+        <div><label for="nome">Nome:</label><br></div>
         <input type="text" name="nome_disci"><br>
-        <label for="carga_horaria">Carga Horária:</label><br>
+        <div><label for="carga_horaria">Carga Horária:</label><br></div>
         <input type="number" name="carga_horaria"><br>
-        <label for="codigo">Código:</label><br>
+        <div><label for="codigo">Código:</label><br></div>
         <input type="text" name="codigo"><br><br>
         <button type="submit" id="new">Criar Disciplina</button>
     </form>
