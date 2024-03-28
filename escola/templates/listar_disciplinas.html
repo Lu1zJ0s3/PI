@@ -10,8 +10,9 @@
     <h1>Disciplinas</h1>
     <ul>
         {% for disciplina in disciplinas %}
-            <li>{{ disciplina.nome }} - {{ disciplina.carga_horaria }} horas - {{ disciplina.codigo }}</li>
+            <li>{{ disciplina.nome }} - {{ disciplina.carga_horaria }} horas - {{ disciplina.codigo }} <a href="/apagar_disciplinas/{{disciplina.id}} " id="del"><button class="del-button">Apagar</button></a></li>
         {% endfor %}
     </ul>
+    <a href="/"><button class="normal-buttons">Voltar</button></a>
 </body>
 </html>

@@ -12,6 +12,7 @@ h1 {
 ul li {
     border-bottom: 1px solid #ddd;
     padding: 10px 0;
+    list-style: none;
 }
 
 ul li:last-child {
@@ -20,4 +21,31 @@ ul li:last-child {
 
 ul li:hover {
     background-color: #b1b1b1;
+}
+
+body {
+    margin-left: 15px;
+}
+
+.normal-buttons {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    margin: 10px auto;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.del-button {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    margin: 10px auto;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
 }

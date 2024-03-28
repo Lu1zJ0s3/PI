@@ -7,6 +7,7 @@ urlpatterns = [
     path('criar_disciplina/', views.criar_disciplina, name='criar_disciplina'),
     path('listar_professores/', views.listar_professores, name='listar_professores'),
     path('listar_disciplinas/', views.listar_disciplinas, name='listar_disciplinas'),
+    path('apagar_disciplinas/<int:id>/', views.apagar_disciplinas, name='apagar_disciplinas'),
     path('', views.index, name='index'),
     path('admin/', admin.site.urls),
 ]

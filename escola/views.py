@@ -24,6 +24,10 @@ def criar_disciplina(request):
     disciplinas.save()
     return redirect("/listar_disciplinas/")
 
+def apagar_disciplinas(request,id):
+    disciplinas=Disciplina.objects.get(id=id)
+    disciplinas.delete()
+    return redirect("/")
 
 def listar_professores(request):
     professores = Professor.objects.all()
