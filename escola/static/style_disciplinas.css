@@ -27,6 +27,17 @@ body {
     margin-left: 15px;
 }
 
+.del-button {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    margin: 10px auto;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 .normal-buttons {
     background-color: #007bff;
     color: #fff;
@@ -38,14 +49,3 @@ body {
     cursor: pointer;
 }
 
-
-.del-button {
-    background-color: #ff0000;
-    color: #fff;
-    border: none;
-    margin: 10px auto;
-    padding: 12px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-}
