@@ -15,6 +15,11 @@ def criar_professor(request):
     professores.save()
     return redirect("/listar_professores/")
 
+def apagar_professores(request, id):
+    professores = Professor.objects.get(id=id)
+    professores.delete()
+    return redirect('/listar_professores/')
+
 
 def criar_disciplina(request):
     nom = request.POST['nome_disci']
@@ -27,7 +32,7 @@ def criar_disciplina(request):
 def apagar_disciplinas(request,id):
     disciplinas=Disciplina.objects.get(id=id)
     disciplinas.delete()
-    return redirect("/")
+    return redirect("/listar_disciplinas/")
 
 def listar_professores(request):
     professores = Professor.objects.all()
