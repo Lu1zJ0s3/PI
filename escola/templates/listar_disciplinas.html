@@ -12,7 +12,7 @@
     <ul>
       {% for disciplina in disciplinas %}
         <li>
-          {{ disciplina.nome }} - {{ disciplina.professor }} - {{ disciplina.carga_horaria }} horas - {{ disciplina.codigo }}
+          {{ disciplina.nome }} {{ disciplina.professor }} - {{ disciplina.carga_horaria }} horas - {{ disciplina.codigo }}
           <a href="/apagar_disciplinas/{{ disciplina.id }} "><button class="del-button">Apagar</button></a>
         </li>
       {% endfor %}
