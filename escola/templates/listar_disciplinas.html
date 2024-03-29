@@ -1,21 +1,22 @@
 {% load static %}
 
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Listar Professores e Disciplinas</title>
-    <link rel="stylesheet" href="{% static 'style_disciplinas.css' %}">
-</head>
-<body>
+    <link rel="stylesheet" href="{% static 'style_disciplinas.css' %}" />
+  </head>
+  <body>
     <h1>Disciplinas</h1>
     <ul>
-        {% for disciplina in disciplinas %}
-            <li>{{ disciplina.nome }} - {{ disciplina.carga_horaria }} horas - {{ disciplina.codigo }} 
-            <a href="/apagar_disciplinas/{{disciplina.id}} ">
-            <button class="del-button">Apagar</button></a></li>
-        {% endfor %}
+      {% for disciplina in disciplinas %}
+        <li>
+          {{ disciplina.nome }} - {{ disciplina.professor }} - {{ disciplina.carga_horaria }} horas - {{ disciplina.codigo }}
+          <a href="/apagar_disciplinas/{{ disciplina.id }} "><button class="del-button">Apagar</button></a>
+        </li>
+      {% endfor %}
     </ul>
     <a href="/"><button class="normal-buttons">Voltar</button></a>
-</body>
+  </body>
 </html>

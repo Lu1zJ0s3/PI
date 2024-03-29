@@ -12,8 +12,8 @@ class Professor(models.Model):
 
 class Disciplina(models.Model):
     nome = models.CharField(max_length=50)
+    professor = models.ManyToManyField(Professor)
     carga_horaria = models.IntegerField()
-    codigo = models.CharField(max_length=50)
 
     def __str__(self):
         return self.nome

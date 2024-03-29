@@ -2,36 +2,48 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Criar Modelos</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-</head>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
 
-<body>
+  <body>
     <h1>Criar Professor</h1>
     <form action="{% url 'criar_professor' %}" method="post">
-        {% csrf_token %}
-        <div><label class="label-width" for="nome">Nome:</label><br></div>
-        <input type="text" id="" name="nome_prof"><br>
-        <div><label class="label-width" for="email">Email:</label><br></div>
-        <input type="email" id="" name="email"><br>
-        <div><label class="label-width" for="celular">Celular:</label><br></div>
-        <input type="text" id="" name="celular"><br><br>
-        <button class="normal-buttons" type="submit" id="new">Criar Professor</button>
+      {% csrf_token %}
+      <div>
+        <label>Nome:</label><br />
+      </div>
+      <input type="text" id="" name="nome_prof" /><br />
+      <div>
+        <label>Email:</label><br />
+      </div>
+      <input type="email" id="" name="email" /><br />
+      <div>
+        <label>Celular:</label><br />
+      </div>
+      <input type="text" id="" name="celular" /><br /><br />
+      <button class="normal-buttons" type="submit" id="new">Criar Professor</button>
     </form>
 
     <h1>Criar Disciplina</h1>
     <form action="{% url 'criar_disciplina' %}" method="post">
-        {% csrf_token %}
-        <div><label for="nome">Nome:</label><br></div>
-        <input type="text" name="nome_disci"><br>
-        <div><label for="carga_horaria">Carga Horária:</label><br></div>
-        <input type="number" name="carga_horaria"><br>
-        <div><label for="codigo">Código:</label><br></div>
-        <input type="text" name="codigo"><br><br>
-        <button class="normal-buttons" type="submit" id="new">Criar Disciplina</button>
+      {% csrf_token %}
+      <div>
+        <label>Nome:</label><br />
+      </div>
+      <input type="text" name="nome_disci" /><br />
+      <div>
+        <label>Carga Horária:</label><br />
+      </div>
+      <input type="number" name="carga_horaria" /><br />
+      <div>
+        <label>Código:</label><br />
+      </div>
+      <input type="text" name="codigo" /><br /><br />
+      <button class="normal-buttons" type="submit" id="new">Criar Disciplina</button>
     </form>
-</body>
+  </body>
 </html>

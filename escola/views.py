@@ -3,8 +3,7 @@ from .models import Professor, Disciplina
 
 
 def index(request):
-    professores = Professor.objects.all()
-    return render(request, 'escola.html', {'professores': professores})
+    return render(request, 'escola.html')
 
 
 def criar_professor(request):
